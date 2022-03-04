@@ -1,0 +1,63 @@
+1. Entities and properties in the book publishing industry (in the US)
+    Publishers:
+        PublisherEmail
+        Name
+        ISBN
+
+    Editors:
+        EditorEmail
+        EditorName
+        PublisherEmail
+
+    Books:
+        ISBN
+        Title
+        Genre
+        EditorEmail
+        AuthorEmail
+
+    BookRoyalties:
+        RoyaltyID
+        Royalties
+        ISBN
+        AuthorEmail
+
+    Authors:
+        AuthorEmail
+        AuthorName
+
+    Customers:
+        CustomerEmail
+        Name
+
+    Orders:
+        OrderNumber
+        Date
+        Quantity
+        ISBN
+        CustomerEmail
+
+2. Primary Keys
+    Publishers:
+        PublisherEmail
+    Editors:
+        EditorEmail 
+    Books:
+        ISBN   
+    BookRoyalties:
+        RoyaltyID
+    Authors:
+        AuthorEmail
+    Customers:
+        CustomerEmail
+    Orders:
+        OrderNumber
+        
+3. Publishers, Editors: N:N
+    Publishers, Books: 1:N
+    Editors, Books: N:N
+    Books, Authors: N:N
+    Orders, Customers: 1:1
+    Books, Orders: 1:N
+    Books, BookRoyalties: 1:N 
+    Authors, BookRoyalties: 1:N
